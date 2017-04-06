@@ -42,7 +42,7 @@ consul:
     - ${consul_server}
     - -recursor=169.254.169.250
     - -client=0.0.0.0
-    - -encrpyt=${encryption_key}
+    - -encrpyt="${encryption_key}"
   environment:
     CONSUL_LOCAL_CONFIG: "{\"leave_on_terminate\": true, \"datacenter\": \"${consul_datacenter}\"}"
     CONSUL_BIND_INTERFACE: eth0
