@@ -42,17 +42,17 @@ consul:
     - ${consul_server}
     - -recursor=169.254.169.250
     - -client=0.0.0.0
-    - -encrpyt={encryption_key}
+    - -encrpyt=${encryption_key}
   environment:
     CONSUL_LOCAL_CONFIG: "{\"leave_on_terminate\": true, \"datacenter\": \"${consul_datacenter}\"}"
     CONSUL_BIND_INTERFACE: eth0
   volumes_from:
     - consul-data
   log_opt: {}
-  image: consul:v{version_number}
+  image: consul:v${version_number}
   stdin_open: true
 consul-data:
-  image: consul:v{version_number}
+  image: consul:v${version_number}
   labels:
     io.rancher.container.hostname_override: container_name
     io.rancher.scheduler.global: 'true'
