@@ -17,8 +17,8 @@
       label: "Consul Encrpytion key"
       type: "string"
       required: true
-    - variable: version_number
-      label: "Consul Version"
-      type: "string"
-      required: true
-      default: "0.8.0"
+    # - variable: version_number
+    #   label: "Consul Version"
+    #   type: "string"
+    #   required: true
+    #   default: "0.8.0"

@@ -49,10 +49,10 @@ consul:
   volumes_from:
     - consul-data
   log_opt: {}
-  image: consul:v${version_number}
+  image: consul:v0.8.0
   stdin_open: true
 consul-data:
-  image: consul:v${version_number}
+  image: consul:v0.8.0
   labels:
     io.rancher.container.hostname_override: container_name
     io.rancher.scheduler.global: 'true'
