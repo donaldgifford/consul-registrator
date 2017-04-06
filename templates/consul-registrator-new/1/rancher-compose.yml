@@ -17,3 +17,7 @@
       label: "Consul Encrpytion key"
       type: "string"
       required: true
+    - variable: consul_agent_token
+      label: "Consul Agent Token"
+      type: "string"
+      required: true

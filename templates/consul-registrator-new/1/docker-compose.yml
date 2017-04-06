@@ -44,7 +44,7 @@ consul:
     - -client=0.0.0.0
     - -encrypt=${encryption_key}
   environment:
-    CONSUL_LOCAL_CONFIG: "{\"leave_on_terminate\": true, \"datacenter\": \"${consul_datacenter}\"}"
+    CONSUL_LOCAL_CONFIG: "{\"leave_on_terminate\": true, \"datacenter\": \"${consul_datacenter}\", \"acl_agent_token\": \"${consul_agent_token}\"}"
     CONSUL_BIND_INTERFACE: eth0
   volumes_from:
     - consul-data
